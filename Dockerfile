@@ -11,12 +11,10 @@ RUN locale-gen en_GB
 WORKDIR /tmp
 
 # Kitchen-Docker GEM
-ENV kitchendockercommit 121d027
-RUN git clone https://github.com/stevejmason/kitchen-docker.git
-WORKDIR /tmp/kitchen-docker
-RUN git checkout ${kitchendockercommit}
-RUN chef gem build kitchen-docker.gemspec
-RUN chef gem install kitchen-docker*.gem
+RUN chef gem install kitchen-docker
+
+# Kitchen-EC2 GEM
+RUN chef gem install kitchen-ec2
 
 # Working DIR
 WORKDIR /kitchen
