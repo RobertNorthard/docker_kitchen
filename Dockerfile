@@ -14,7 +14,7 @@ WORKDIR /tmp
 RUN chef gem install kitchen-docker
 
 # Kitchen-EC2.. custom GEM
-ENV kitchenec2commit 51a12d1
+ENV kitchenec2commit cea818c
 RUN git clone https://github.com/stevejmason/kitchen-ec2.git
 WORKDIR /tmp/kitchen-ec2
 RUN git checkout ${kitchenec2commit}
