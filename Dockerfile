@@ -6,7 +6,10 @@ RUN apt-get install -y wget
 RUN apt-get install -y docker.io
 RUN apt-get install -y git
 RUN wget -O- https://www.opscode.com/chef/install.sh | bash -s -- -P chefdk
-RUN locale-gen en_GB
+
+# Gen UTF-8 locale
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
 
 WORKDIR /tmp
 
