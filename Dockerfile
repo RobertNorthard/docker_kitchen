@@ -16,6 +16,9 @@ WORKDIR /tmp
 # Kitchen-Docker GEM
 RUN chef gem install kitchen-docker
 
+# Kitchen azure gem
+RUN chef gem install kitchen-azure
+
 # Kitchen-EC2.. custom GEM
 ENV kitchenec2commit 6fb9047
 RUN git clone https://github.com/stevejmason/kitchen-ec2.git
