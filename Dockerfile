@@ -14,7 +14,7 @@ ENV LANG en_US.UTF-8
 WORKDIR /tmp
 
 # Kitchen-Docker GEM
-RUN chef gem install kitchen-docker
+RUN chef gem install kitchen-docker -v 2.0.0
 
 # Kitchen azure gem
 RUN chef gem install kitchen-azure
